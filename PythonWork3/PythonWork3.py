@@ -9,12 +9,31 @@
 #385916 >>> yes
 #123456 >>> no
 
-ticket = (input('Введите номер билета'))
+ticket = int(input('Введите номер билета '))
+summ1 = 0
+summ2 = 0
 
+count = 0
+
+while count < 3:
 
     x = ticket % 10
-    summ = summ + x
+    summ1 = summ1 + x
     ticket = ticket // 10
+    count += 1
 
-for i in ticket:
-    print(i)
+count = 0
+
+while count < 3:
+
+    x = ticket % 10
+    summ2 = summ2 + x
+    ticket = ticket // 10
+    count += 1
+
+print(summ1, summ2)
+
+if summ1 == summ2:
+    print('yes')
+elif summ1 != summ2:
+    print('no')
