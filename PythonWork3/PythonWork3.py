@@ -9,10 +9,12 @@
 #385916 >>> yes
 #123456 >>> no
 
+#(*) Усложнение. Вывод результат на экран сделайте одной строкой(только один print), 
+#для этого используйте тернарный оператор
+
 ticket = int(input('Введите номер билета '))
 summ1 = 0
 summ2 = 0
-
 count = 0
 
 while count < 3:
@@ -31,9 +33,4 @@ while count < 3:
     ticket = ticket // 10
     count += 1
 
-print(summ1, summ2)
-
-if summ1 == summ2:
-    print('yes')
-elif summ1 != summ2:
-    print('no')
+print(f'{"yes" if summ1 == summ2 else "NO"}')
